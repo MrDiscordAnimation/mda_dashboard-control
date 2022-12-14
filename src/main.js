@@ -5,7 +5,7 @@
 
 function mdascripts(){
 var mda = document.getElementById("loadSCRIPT");
-if (mda.getAttribute("version")==="SL900"){
+if (mda.getAttribute("version")==="MDA90"){
 if (mda.getAttribute("type")==="server"){
 
 }
