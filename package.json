@@ -1,7 +1,7 @@
 {
   "name": "mdadashboard",
   "productName": "MDA Dashboard",
-  "version": "MDA90",
+  "version": "1.0.1",
   "description": "A Dashboard Control Application. Made for Server Controlling Easy.",
   "repository": "https://github.com/MrDiscordAnimation/mda_dashboard-control",
   "main": "src/index.js",
