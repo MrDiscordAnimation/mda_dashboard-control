@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dashboard Panel</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="./main.js"></script>
+    <script id="loadSCRIPT" version="SL901" type="server"></script>
+  </head>
+  <body id="bodyMAIN">
+<!--Head System-->
+<div id="bodyHEADER">
+<div class="withFrame-BYMDA titleBar-BYMDA flex-BYMDA directionRowReverse-BYMDA justifyStart-BYMDA alignStretch-BYMDA">
+	<div class="watermarkBYMDA wordmarkBYMDA fontMDANoDiscord"><b>Dashboard Panel</b></div>
+	<div onclick="esolc()" class="winButtonClose-BYMDA winButton-BYMDA flex-BYMDA justifyCenter-BYMDA alignCenter-BYMDA" aria-label="Close" tabindex="-1" role="button"><svg aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 12 12"><polygon fill="currentColor" fill-rule="evenodd" points="11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1"></polygon></svg></div>
+	<div onclick="maxi()" id="square" class="winButtonMinMax-BYMDA winButton-BYMDA flex-BYMDA justifyCenter-BYMDA alignCenter-BYMDA" aria-label="Maximise" tabindex="-1" role="button"><svg aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 12 12"><rect width="9" height="9" x="1.5" y="1.5" fill="none" stroke="currentColor"></rect></svg></div>
+	<div onclick="mini()" class="winButtonMinMax-BYMDA winButton-BYMDA flex-BYMDA justifyCenter-BYMDA alignCenter-BYMDA" aria-label="Minimise" tabindex="-1" role="button"><svg aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 12 12"><rect fill="currentColor" width="10" height="1" x="1" y="6"></rect></svg></div>
+</div>
+<script>
+function mini(){
+window.ipcRender.send('window:minimize');
+}
+function maxi(){
+document.getElementById("square").onclick=function(){restore()};
+window.ipcRender.send('window:maximize');
+}
+function restore(){
+document.getElementById("square").onclick=function(){maxi()};
+window.ipcRender.send('window:restore');
+}
+function esolc(){
+window.ipcRender.send('window:close');
+}
+</script>
+</div>
+<!--End of Head System-->
+<div class="bodyREAL" id="bodyVIEW">
+    <h1>MDA Dashboard</h1>
+    <hr>
+    <legend><p>Welcome to your Dashboard. Please Login.</p></legend>
+  <fieldset>
+    <form novalidate>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" placeholder="Your Username" required><br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="Your Password" required><br>
+    <button type="button" onclick="LogIn()">Log In</button>
+  </form>
+  </fieldset>
+</div>
+  </body>
+</html>

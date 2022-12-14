@@ -1,0 +1,31 @@
+{
+  "name": "mdadashboard",
+  "productName": "MDA Dashboard",
+  "version": "SL901",
+  "description": "A Dashboard Control Application. Made for Server Controlling Easy.",
+  "repository": "https://github.com/MrDiscordAnimation/mda_dashboard-control",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "MDAPublishers",
+  "license": "MIT",
+  "dependencies": {
+    "@electron-forge/publisher-github": "^6.0.4",
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^2.0.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.70",
+    "@electron-forge/maker-deb": "^6.0.0-beta.70",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.70",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.70",
+    "@electron-forge/maker-zip": "^6.0.0-beta.70",
+    "electron": "21.2.0"
+  }
+}
